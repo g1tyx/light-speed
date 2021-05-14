@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+*{
+	border: hidden;
+	border-color: blue;
+	border-width: 1px;
+	
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	background-color: white;
+}
+
+.tab{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+}
+
+#distance{
+	display: flex;
+	justify-content: center;
+	font-size: 40px;
+}
+
+.buttonContainer{
+	height: 50px;
+	width: 100%;
+}
+
+.buttonContainer div{
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	margin: 6px 0 0 0;
+}
+
+.buttonContainer button{
+	width: 15%;
+	height: 100%;
+	float: left;
+	outline: none;
+	cursor: pointer;
+	padding: 10px;
+	margin: 0px 3px;
+	border: 2px solid;
+	border-radius: 35px;
+	background-color: white;
+}
+
+#speed{
+	display: flex;
+	justify-content: center;
+}
+
+#wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+#upgradeContainer{
+	display: flex;
+	justify-content: center;
+	width: 600px;
+}
+
+.speedUpgradeContainer{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 760px;
+}
+
+.speedUpgrade{
+	border: solid gray 2px;
+	border-radius: 35px;
+	width: 250px;
+	text-align: center;
+	margin: 10px;
+}
+
+#breakContainer{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+#break{
+	border: solid black 2px;
+	border-radius: 35px;
+	width: 300px;
+	text-align: center;
+	margin: 30px 0 0 0;
+	font-size: 20px;
+}
+
+#breakPointsContainer{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 760px;
+}
+
+#breakPoints{
+	font-size: 20px;
+}
+
+#speedBoost{
+	font-size: 25px;
+}
+
+#speedBoostPerSec{
+	font-size: 15px;
+}
+
+#breakPoints2{
+	font-size: 20px;
+}
+
+#improvementTextContainer{
+	display: flex;
+	justify-content: center;
+}
+
+#improveContainer{
+	display: flex;
+	justify-content: center;
+}
+
+#improve{
+	border: solid black 2px;
+	border-radius: 35px;
+	width: 300px;
+	text-align: center;
+	margin: 30px 0 0 0;
+	font-size: 20px;
+}
+
+#improvementUpgradeContainer{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 1200px;
+}
+
+.improveUpgrade{
+	border: solid gray 2px;
+	border-radius: 35px;
+	width: 250px;
+	text-align: center;
+	margin: 5px;
+}
+
+.improveUpgrade.bought{
+	border-color: black;
+}
+
+.improveUpgrade.bought .improveCost{
+	display: none;
+}
+
+#autobuyerContainer{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 600px;
+}
+
+.autobuyer{
+	width: 250px;
+	border: solid gray 2px;
+	border-radius: 35px;
+	text-align: center;
+	margin: 10px;
+}
+
+
+
+
+
+
+
+
+.speedUpgrade.locked{
+	display: none;
+}
+
+#break.locked{
+	display: none;
+}
+
+.tab.locked{
+	display: none;
+}
+
+.improveUpgrade.locked{
+	display: none;
+}
+
+#improve.locked{
+	display: none;
+}
+
+.autobuyer.locked{
+	display: none;
+}
+
+
