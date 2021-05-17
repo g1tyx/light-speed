@@ -36,7 +36,7 @@ var cnItems = {
     'Correct Autobuyer': '修正自动购买器',
     'Correct is log30 instead': '修正改为log30',
     'Correct the Speed of Light': '修正光速',
-    'Improve BP and Speedboost': '增强BP和速度提升',
+    'Improve BP and Speedboost': '增强突破点和速度提升',
     'Unlock Patch Autobuyer': '解锁修补自动购买器',
     'Unlock Recover': '解锁恢复',
     'Unlock Recover Autobuyer': '解锁恢复自动购买器',
