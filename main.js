@@ -378,7 +378,7 @@ function buyImproveUpgrades(x){
 		if (player.breakPoints.gte(1e63)){
 			player.breakPoints = player.breakPoints.minus(1e63);
 			player.hasBoughtImp16 = true;
-			alert("Congratulations!! You won the game!");
+			alert("恭喜!! 你通关了!");
 		}
 	}
 }
