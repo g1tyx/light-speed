@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>光速放置 - Light Speed</title>
+		<link href="style.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<!--		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> -->
+	</head>
+	<body>
+<script src="chs.js?07071443"></script>
+<script src="//g8hh.com/zh/core.js"></script>
+		<div id="header">
+			<h1 id="distance"></h1>
+			<h2 id="speed"></h2>
+			<div class="buttonContainer">
+				<div>
+					<button onclick="showPanel(0, 'black')" id="tab0" class="tab">Normal</button>
+					<button onclick="showPanel(1, 'black')" id="tab1" class="tab">Break</button>
+					<button onclick="showPanel(2, 'black')" id="tab2" class="tab">Improvement</button>
+					<button onclick="showPanel(3, 'black')" id="tab3" class="tab">Autobuyers</button>
+				</div>
+			</div>
+		</div>
+		<div id="wrapper">
+			<div id="upgradeContainer" class="tabPanel">
+				<div class="speedUpgradeContainer">
+					<div class="speedUpgrade" id="repair" onclick="buyUpgrade(1)">
+						<p>Repair the Speed of Light</p>
+						<p id="repairEffect">SOL is 0.1 Meters/s faster</p>
+						<p id="repairCost">Cost: </p>
+					</div>
+					<div class="speedUpgrade" id="fix" onclick="buyUpgrade(2)">
+						<p>Fix the Speed of Light</p>
+						<p id="fixEffect">SOL is 2x faster</p>
+						<p id="fixCost">Cost: </p>
+					</div>
+					<div class="speedUpgrade" id="patch" onclick="buyUpgrade(3)">
+						<p>Patch the Speed of Light</p>
+						<p id="patchEffect">SOL is 0.01 Meters/s/s faster</p>
+						<p id="patchCost">Cost: </p>
+					</div>
+					<div class="speedUpgrade" id="correct" onclick="buyUpgrade(4)">
+						<p>Correct the Speed of Light</p>
+						<p id="correctEffect">SOL is log50(Meters)x faster</p>
+						<p id="correctCost">Cost: </p>
+					</div>
+					<div class="speedUpgrade" id="recover" onclick="buyUpgrade(5)">
+						<p>Recover the Speed of Light</p>
+						<p id="recoverEffect">SOL is log10(BP)x faster</p>
+						<p id="recoverCost">Cost: </p>
+					</div>
+				</div>
+				<div id="breakContainer">
+					<div id="break" onclick="breakSOL()">
+						<p>Break the universe</p>
+					</div>
+				</div>
+			</div>
+			<div class="tabPanel">
+				<div id="breakPointsContainer">
+					<p id="breakPoints">You have x Break Points</p>
+					<p id="speedBoost">You have x Speed Boost boosting SOL by Xx</p>
+					<p id="speedBoostPerSec">You get x Speed Boost Per Sec</p>
+				</div>
+				<div class="speedUpgradeContainer">
+					<div id="speedGenerator1" class="speedUpgrade" onclick="buyGenerator(1)">
+						<p>Speed Generator One</p>
+						<p id="speedGeneratorAmount1">Amount: </p>
+						<p id="speedGeneratorMult1">Multiplier: </p>
+						<p id="speedGeneratorCost1">Cost: </p>
+					</div>
+					<div id="speedGenerator2" class="speedUpgrade" onclick="buyGenerator(2)">
+						<p>Speed Generator Two</p>
+						<p id="speedGeneratorAmount2">Amount: </p>
+						<p id="speedGeneratorMult2">Multiplier: </p>
+						<p id="speedGeneratorCost2">Cost: </p>
+					</div>
+					<div id="speedGenerator3" class="speedUpgrade" onclick="buyGenerator(3)">
+						<p>Speed Generator Three</p>
+						<p id="speedGeneratorAmount3">Amount: </p>
+						<p id="speedGeneratorMult3">Multiplier: </p>
+						<p id="speedGeneratorCost3">Cost: </p>
+					</div>
+					<div id="speedGenerator4" class="speedUpgrade" onclick="buyGenerator(4)">
+						<p>Speed Generator Four</p>
+						<p id="speedGeneratorAmount4">Amount: </p>
+						<p id="speedGeneratorMult4">Multiplier: </p>
+						<p id="speedGeneratorCost4">Cost: </p>
+					</div>
+					<div id="speedGenerator5" class="speedUpgrade" onclick="buyGenerator(5)">
+						<p>Speed Generator Five</p>
+						<p id="speedGeneratorAmount5">Amount: </p>
+						<p id="speedGeneratorMult5">Multiplier: </p>
+						<p id="speedGeneratorCost5">Cost: </p>
+					</div>
+					<div id="speedGenerator6" class="speedUpgrade" onclick="buyGenerator(6)">
+						<p>Speed Generator Six</p>
+						<p id="speedGeneratorAmount6">Amount: </p>
+						<p id="speedGeneratorMult6">Multiplier: </p>
+						<p id="speedGeneratorCost6">Cost: </p>
+					</div>
+				</div>
+			</div>
+			<div class="tabPanel">
+				<div id="improvementTextContainer">
+					<p id="breakPoints2">You have x Break Points</p>
+				</div>
+				<div id="improveContainer">
+					<div id="improve" onclick="unlockImproveUps()">
+						<p>Improve the Speed of Light</p>
+					</div>
+				</div>
+				<div id="improvementUpgradeContainer">
+					<div class="improveUpgrade" id="improveUpgrade1" onclick="buyImproveUpgrades(1)">
+						<p>Repair gives +1 instead</p>
+						<p class="improveCost">Cost: 25 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade2" onclick="buyImproveUpgrades(2)">
+						<p>Unlock Repair Autobuyer</p>
+						<p class="improveCost">Cost: 100 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade3" onclick="buyImproveUpgrades(3)">
+						<p>Fix is 3x instead</p>
+						<p class="improveCost">Cost: 500 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade4" onclick="buyImproveUpgrades(4)">
+						<p>Unlock Fix Autobuyer</p>
+						<p class="improveCost">Cost: 5e4 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade5" onclick="buyImproveUpgrades(5)">
+						<p>Patch is 0.1 instead</p>
+						<p class="improveCost">Cost: 1e5 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade6" onclick="buyImproveUpgrades(6)">
+						<p>Unlock Patch Autobuyer</p>
+						<p class="improveCost">Cost: 5e5 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade7" onclick="buyImproveUpgrades(7)">
+						<p>Correct is log30 instead</p>
+						<p class="improveCost">Cost: 1e6 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade8" onclick="buyImproveUpgrades(8)">
+						<p>Unlock Correct Autobuyer</p>
+						<p class="improveCost">Cost: 5e6 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade9" onclick="buyImproveUpgrades(9)">
+						<p>Speedboost Effect is stronger</p>
+						<p class="improveCost">Cost: 1e7 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade10" onclick="buyImproveUpgrades(10)">
+						<p>Gain 100% of BP every second</p>
+						<p class="improveCost">Cost: 1e10 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade11" onclick="buyImproveUpgrades(11)">
+						<p>Unlock Generator Autobuyers</p>
+						<p class="improveCost">Cost: 1e12 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade12" onclick="buyImproveUpgrades(12)">
+						<p>Unlock Recover</p>
+						<p class="improveCost">Cost: 1e14 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade13" onclick="buyImproveUpgrades(13)">
+						<p>Unlock Recover Autobuyer</p>
+						<p class="improveCost">Cost: 1e20 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade14" onclick="buyImproveUpgrades(14)">
+						<p>Repair also multiplies by 1.5x</p>
+						<p class="improveCost">Cost: 1e21 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade15" onclick="buyImproveUpgrades(15)">
+						<p>Improve BP formula</p>
+						<p class="improveCost">Cost: 1e39 BP</p>
+					</div>
+					<div class="improveUpgrade" id="improveUpgrade16" onclick="buyImproveUpgrades(16)">
+						<p>Improve BP and Speedboost</p>
+						<p class="improveCost">Cost: 1e63 BP</p>
+					</div>
+				</div>
+			</div>
+			<div class="tabPanel">
+				<div id="autobuyerContainer">
+					<div class="autobuyer" id="autoRepair">
+						<div>Repair Autobuyer</div>
+						<input type="checkbox" id="autoRepairCheck" class="autoCheck">				
+					</div>
+					<div class="autobuyer" id="autoFix">
+						<div>Fix Autobuyer</div>
+						<input type="checkbox" id="autoFixCheck" class="autoCheck">				
+					</div>
+					<div class="autobuyer" id="autoPatch">
+						<div>Patch Autobuyer</div>
+						<input type="checkbox" id="autoPatchCheck" class="autoCheck">				
+					</div>
+					<div class="autobuyer" id="autoCorrect">
+						<div>Correct Autobuyer</div>
+						<input type="checkbox" id="autoCorrectCheck" class="autoCheck">				
+					</div>
+					<div class="autobuyer" id="autoGenerator">
+						<div>Speed Generator Autobuyer</div>
+						<input type="checkbox" id="autoGeneratorCheck" class="autoCheck">				
+					</div>
+					<div class="autobuyer" id="autoRecover">
+						<div>Recover Autobuyer</div>
+						<input type="checkbox" id="autoRecoverCheck" class="autoCheck">				
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="break_eternity.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+<!--客服 开始-->
+<script src="//g8hh.com/static/js/jquery.min.js"></script>
+<link rel="stylesheet" href="//g8hh.com/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//g8hh.com/static/js/kf.js"></script>
+<!-- 客服 结束 -->
+<!--站长统计--> 
+<div style="display: none">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?028b1b5f659ed138230f4cafd7ad0dfc";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    </div>
+</html>
